@@ -421,31 +421,6 @@ public class AppTest {
 		    System.out.println("Extracted number of results: " + resultsCount);
 		    System.out.println("------------------------------------------------------------");
 		
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//
-//		WebElement searchResultsCountElement = wait.until(ExpectedConditions
-//				.visibilityOfElementLocated(By.cssSelector("span[data-testid='srp_properties_found']")));
-//
-//		String resultsCountText = searchResultsCountElement.getText().trim();
-//		System.out.println("Search results loaded: " + resultsCountText);
-//
-//		Assert.assertTrue(!resultsCountText.isEmpty() && resultsCountText.contains("stays found"),
-//				"Search results count not found. The page may not have loaded correctly.");
-//		System.out.println("------------------------------------------------------------");
 
 	}
-//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-//	wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-bar"))); // تأكد من عدم وجود شريط
-//																						// التحميل
-//
-//	// الحصول على الرابط بعد البحث
-//	String currentUrl = driver.getCurrentUrl();
-//
-//	// التأكد من أن الرابط يحتوي على "hotels"
-//	if (currentUrl.contains("hotels")) {
-//		System.out.println("✅ الصفحة تم تحميلها بنجاح والرابط يحتوي على 'hotels' !");
-//	} else {
-//		System.out.println("❌ هناك مشكلة، الرابط لا يحتوي على 'hotels'.");
-//	}
-
 }
