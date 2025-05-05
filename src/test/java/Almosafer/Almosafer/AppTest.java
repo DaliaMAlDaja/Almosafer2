@@ -119,7 +119,7 @@ public class AppTest {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		// تكبير الصفحة إلى 300%
+		
 		System.out.println("Zooming the page to 300%...");
 		js.executeScript("document.body.style.zoom='300%';");
 		Thread.sleep(2000);
