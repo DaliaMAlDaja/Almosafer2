@@ -1,37 +1,78 @@
-# Almosafer_Project
+# Almosafer Automation Testing Project
 
-## ✅ Automated Test Scenario:
+This project automates a functional test scenario for the [Almosafer](https://www.almosafer.com/en) website using **Java**, **Selenium WebDriver**, and **Eclipse IDE**. The test verifies core features on the homepage and hotel search functionalities in both Arabic and English languages.
 
-1. Navigate to URL: https://www.almosafer.com/en  
-2. Once the website is loaded, the following assertions are made:
+> This test was built as part of a hands-on automation training project under the HTU training program.
 
-- Default language is correct (EN)
-- Default currency is correct (SAR)
-- Contact numbers are correct
-- "Qitaf" logo is displayed in the footer
-- Hotels search tab is **NOT** selected by default
-- Flight departure date = today + **3** days
-- Return date = today + **10** days
+---
 
-3. Use `random` method to change language:
-   - Randomly decide whether to keep language as is or switch
-   - Make assertion that language updated accordingly
+## 🔍 Test Scenario Overview
 
-4. Switch to **Hotel Search Tab**
+The automation covers the following key actions and validations:
 
-5. In location field:
-   - If current language = EN → randomly enter: `Dubai`, `Jeddah`, `Riyadh`
-   - If current language = AR → randomly enter: `دبي`, `جدة`, `الرياض`
-   - Select first result from autocomplete list
+### 🌐 Homepage Validations
 
-6. Randomly select one of the following options:
-   - 1 room, 2 adults, 0 children
-   - 1 room, 1 adult, 0 children
+- Navigate to: `https://www.almosafer.com/en`
+- Assert the default **language** is English (`EN`)
+- Assert the default **currency** is Saudi Riyal (`SAR`)
+- Verify that the **contact numbers** are displayed correctly
+- Scroll down and **zoom in** to confirm **"Qitaf" logo** is visible in the footer
+- Confirm that the **Hotels** search tab is **not selected** by default
+- Validate that **Flight Departure Date** is automatically set to **today + 3 days**
+- Validate that **Flight Return Date** is automatically set to **today + 10 days**
 
-7. Click on **Search Hotels** button
+---
 
-8. On new **Search Results Page**:
-   - Wait for loading to fully complete (wait for loading bar or API to finish)
-   - Perform additional assertions as needed
+### 🌍 Language Switching (Randomized Logic)
 
-✅ All steps implemented using **Java + Selenium + Eclipse**
+- Language is changed randomly using click behavior:
+  - Single click: switches to Arabic
+  - Double click: switches back to English
+- Assertion is made to verify the language was updated correctly
+
+---
+
+### 🏨 Hotel Search Flow
+
+- Switch to the **Hotels** tab (Stay tab)
+- In the **destination/location** field:
+  - If the language is English → randomly choose from: `Dubai`, `Jeddah`, `Riyadh`
+  - If the language is Arabic → randomly choose from: `دبي`, `جدة`, `الرياض`
+- Select the **first suggestion** from the autocomplete list
+- Select check-in and check-out dates 
+- Choose number of guests by randomly selecting from:
+  - `"1 Room, 2 Adults, 0 Children"`
+  - `"1 Room, 1 Adult, 0 Children"`
+- Click the **Search Hotels** button
+
+---
+
+### 📄 Search Results Page
+
+- Wait until the page is fully loaded (including API responses or loading bar)
+- Final assertion: Confirm that the number of **available hotels** is displayed correctly
+
+---
+
+## 🛠️ Tools & Technologies Used
+
+- **Java**
+- **Selenium WebDriver**
+- **TestNG**
+- **Eclipse IDE**
+- **Maven** (for dependency management)
+
+---
+
+## 📌 Notes
+
+- The test uses **randomization** for language toggle and guest selection to simulate real-user scenarios.
+- All validations are clearly asserted to ensure functional correctness of the UI and core logic.
+
+---
+
+## 🧑‍💻 Author
+
+- Dalia Al Daja  
+- Created as part of a practical training at **HTU – Al Hussein Technical University**
+
