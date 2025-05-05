@@ -149,13 +149,9 @@ public class AppTest {
 	@Test(priority = 5, enabled = true)
 	public void hotelsTab() throws InterruptedException {
 		System.out.println("Test 5 :Hotels search tab is NOT selected by default");
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollTo(0,0)");
-		Thread.sleep(2000);
+		
 		WebElement hotelsTab = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
-
 		String classValue = hotelsTab.getDomAttribute("class");
-
 		Assert.assertFalse(classValue.contains("active"));
 		System.out.println("Hotels tab is not selected by default (as expected)");
 		System.out.println("------------------------------------------------------------");
